@@ -1,0 +1,601 @@
+Order ID,Order Date,Region,Channel,Customer Type,Product,Category,Units,Unit Price,Discount,Revenue
+1001,2025-01-13,North,Online,Returning,Insulated Bottle,Outdoor,3,24.50,0,73.50
+1002,2025-02-14,North,Online,Returning,Running Shoes,Fitness,2,119.00,0,238.00
+1003,2025-10-15,East,Online,Returning,Trail Backpack,Outdoor,1,89.00,0,89.00
+1004,2025-01-04,South,In store,New,Portable Charger,Electronics,3,34.99,0,104.97
+1005,2025-02-22,West,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1006,2025-10-02,North,In store,Returning,Resistance Bands,Fitness,1,18.75,0.2,15.00
+1007,2025-10-23,East,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1008,2025-02-21,West,Online,New,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1009,2025-12-10,East,Online,Returning,Wireless Earbuds,Electronics,1,79.00,0.2,63.20
+1010,2025-03-25,West,Online,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1011,2025-04-28,South,Online,New,Trail Backpack,Outdoor,3,89.00,0.1,240.30
+1012,2025-04-19,West,In store,New,Smart Watch,Electronics,2,199.00,0,398.00
+1013,2025-05-07,East,In store,Returning,Camping Lantern,Outdoor,3,39.99,0,119.97
+1014,2025-07-05,East,Online,Returning,Yoga Mat,Fitness,1,29.00,0.2,23.20
+1015,2025-03-20,South,Online,New,Insulated Bottle,Outdoor,2,24.50,0.1,44.10
+1016,2025-09-28,West,Online,Returning,Resistance Bands,Fitness,1,18.75,0,18.75
+1017,2025-05-17,North,Online,Returning,Running Shoes,Fitness,3,119.00,0,357.00
+1018,2025-09-14,North,In store,Returning,Portable Charger,Electronics,3,34.99,0,104.97
+1019,2025-11-08,North,Online,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1020,2025-01-10,West,In store,New,Resistance Bands,Fitness,1,18.75,0,18.75
+1021,2025-10-18,South,Online,Returning,Wireless Earbuds,Electronics,4,79.00,0,316.00
+1022,2025-03-06,East,In store,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1023,2025-04-19,East,In store,New,Yoga Mat,Fitness,4,29.00,0.1,104.40
+1024,2025-08-13,North,Online,New,Smart Watch,Electronics,4,199.00,0,796.00
+1025,2025-04-28,East,Online,New,Running Shoes,Fitness,2,119.00,0,238.00
+1026,2025-06-19,East,Online,Returning,Trail Backpack,Outdoor,1,89.00,0,89.00
+1027,2025-05-05,North,Online,Returning,Resistance Bands,Fitness,3,18.75,0.1,50.62
+1028,2025-08-05,North,Online,New,Smart Watch,Electronics,1,199.00,0.1,179.10
+1029,2025-02-25,South,In store,New,Smart Watch,Electronics,1,199.00,0,199.00
+1030,2025-05-08,West,Online,New,Resistance Bands,Fitness,4,18.75,0,75.00
+1031,2025-01-08,West,Online,Returning,Running Shoes,Fitness,5,119.00,0.2,476.00
+1032,2025-04-20,North,Online,Returning,Resistance Bands,Fitness,4,18.75,0.2,60.00
+1033,2025-08-21,East,In store,New,Portable Charger,Electronics,1,34.99,0,34.99
+1034,2025-04-22,East,In store,New,Portable Charger,Electronics,5,34.99,0,174.95
+1035,2025-09-15,North,Online,Returning,Resistance Bands,Fitness,4,18.75,0,75.00
+1036,2025-11-01,South,Online,Returning,Insulated Bottle,Outdoor,1,24.50,0.1,22.05
+1037,2025-11-14,East,In store,Returning,Trail Backpack,Outdoor,1,89.00,0,89.00
+1038,2025-12-09,South,In store,Returning,Wireless Earbuds,Electronics,3,79.00,0,237.00
+1039,2025-01-05,West,Online,Returning,Insulated Bottle,Outdoor,2,24.50,0.2,39.20
+1040,2025-05-16,North,Online,New,Running Shoes,Fitness,1,119.00,0,119.00
+1041,2025-08-13,East,Online,Returning,Camping Lantern,Outdoor,3,39.99,0.1,107.97
+1042,2025-06-03,West,In store,New,Running Shoes,Fitness,4,119.00,0,476.00
+1043,2025-10-11,North,In store,New,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1044,2025-09-16,West,Online,Returning,Portable Charger,Electronics,2,34.99,0.2,55.98
+1045,2025-01-23,East,In store,New,Portable Charger,Electronics,1,34.99,0.1,31.49
+1046,2025-10-10,North,Online,Returning,Resistance Bands,Fitness,3,18.75,0,56.25
+1047,2025-10-26,North,In store,Returning,Smart Watch,Electronics,2,199.00,0,398.00
+1048,2025-07-03,North,In store,Returning,Trail Backpack,Outdoor,1,89.00,0,89.00
+1049,2025-05-02,West,In store,New,Camping Lantern,Outdoor,4,39.99,0.2,127.97
+1050,2025-07-30,West,In store,New,Smart Watch,Electronics,3,199.00,0.1,537.30
+1051,2025-07-15,North,In store,New,Insulated Bottle,Outdoor,4,24.50,0.1,88.20
+1052,2025-04-25,South,Online,Returning,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1053,2025-06-29,West,In store,Returning,Portable Charger,Electronics,2,34.99,0,69.98
+1054,2025-05-14,North,Online,Returning,Insulated Bottle,Outdoor,1,24.50,0.2,19.60
+1055,2025-06-10,North,Online,New,Smart Watch,Electronics,1,199.00,0.2,159.20
+1056,2025-01-01,East,Online,New,Yoga Mat,Fitness,2,29.00,0.1,52.20
+1057,2025-12-07,East,Online,Returning,Insulated Bottle,Outdoor,4,24.50,0,98.00
+1058,2025-09-17,South,In store,Returning,Portable Charger,Electronics,1,34.99,0,34.99
+1059,2025-08-04,East,Online,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1060,2025-07-27,North,In store,Returning,Portable Charger,Electronics,2,34.99,0,69.98
+1061,2025-08-27,East,Online,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1062,2025-09-21,North,Online,Returning,Portable Charger,Electronics,2,34.99,0,69.98
+1063,2025-04-12,West,Online,Returning,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1064,2025-12-23,North,Online,Returning,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1065,2025-08-06,East,In store,New,Insulated Bottle,Outdoor,1,24.50,0.1,22.05
+1066,2025-03-04,East,In store,Returning,Wireless Earbuds,Electronics,2,79.00,0.1,142.20
+1067,2025-11-10,South,In store,Returning,Resistance Bands,Fitness,3,18.75,0.1,50.62
+1068,2025-08-19,East,In store,Returning,Resistance Bands,Fitness,1,18.75,0,18.75
+1069,2025-08-14,North,In store,Returning,Portable Charger,Electronics,1,34.99,0,34.99
+1070,2025-03-12,North,Online,New,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1071,2025-06-19,North,In store,New,Yoga Mat,Fitness,2,29.00,0,58.00
+1072,2025-10-22,South,In store,Returning,Trail Backpack,Outdoor,1,89.00,0,89.00
+1073,2025-10-03,East,Online,Returning,Yoga Mat,Fitness,3,29.00,0,87.00
+1074,2025-08-12,East,In store,Returning,Portable Charger,Electronics,2,34.99,0,69.98
+1075,2025-03-07,West,Online,New,Resistance Bands,Fitness,5,18.75,0,93.75
+1076,2025-03-11,North,In store,New,Yoga Mat,Fitness,4,29.00,0,116.00
+1077,2025-06-22,West,In store,New,Smart Watch,Electronics,3,199.00,0,597.00
+1078,2025-08-29,West,In store,New,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1079,2025-11-30,North,Online,Returning,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1080,2025-03-06,West,In store,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1081,2025-03-27,East,Online,Returning,Smart Watch,Electronics,2,199.00,0.2,318.40
+1082,2025-10-24,East,In store,New,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1083,2025-02-08,North,In store,Returning,Wireless Earbuds,Electronics,2,79.00,0.1,142.20
+1084,2025-10-17,South,In store,New,Insulated Bottle,Outdoor,3,24.50,0,73.50
+1085,2025-01-07,North,In store,Returning,Smart Watch,Electronics,3,199.00,0.1,537.30
+1086,2025-12-29,East,In store,Returning,Resistance Bands,Fitness,1,18.75,0,18.75
+1087,2025-09-05,East,In store,Returning,Running Shoes,Fitness,2,119.00,0.1,214.20
+1088,2025-05-23,South,In store,New,Insulated Bottle,Outdoor,4,24.50,0,98.00
+1089,2025-06-16,West,In store,New,Resistance Bands,Fitness,1,18.75,0,18.75
+1090,2025-10-12,North,In store,Returning,Portable Charger,Electronics,1,34.99,0.2,27.99
+1091,2025-12-20,South,Online,New,Wireless Earbuds,Electronics,2,79.00,0.1,142.20
+1092,2025-07-27,East,In store,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1093,2025-08-06,South,In store,New,Smart Watch,Electronics,5,199.00,0,995.00
+1094,2025-04-29,North,Online,New,Portable Charger,Electronics,1,34.99,0,34.99
+1095,2025-05-22,East,In store,Returning,Resistance Bands,Fitness,3,18.75,0.2,45.00
+1096,2025-06-01,North,Online,New,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1097,2025-10-11,East,In store,New,Trail Backpack,Outdoor,1,89.00,0.2,71.20
+1098,2025-10-21,South,Online,New,Trail Backpack,Outdoor,1,89.00,0,89.00
+1099,2025-02-28,North,Online,New,Resistance Bands,Fitness,3,18.75,0,56.25
+1100,2025-02-13,West,Online,Returning,Portable Charger,Electronics,5,34.99,0,174.95
+1101,2025-08-19,East,In store,New,Yoga Mat,Fitness,4,29.00,0,116.00
+1102,2025-11-09,West,Online,New,Trail Backpack,Outdoor,5,89.00,0,445.00
+1103,2025-03-22,North,In store,Returning,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1104,2025-05-30,North,In store,New,Resistance Bands,Fitness,1,18.75,0,18.75
+1105,2025-05-16,East,Online,Returning,Wireless Earbuds,Electronics,3,79.00,0,237.00
+1106,2025-04-26,West,Online,New,Running Shoes,Fitness,2,119.00,0.2,190.40
+1107,2025-11-01,North,Online,Returning,Portable Charger,Electronics,3,34.99,0,104.97
+1108,2025-12-25,East,In store,New,Portable Charger,Electronics,1,34.99,0,34.99
+1109,2025-08-10,North,Online,Returning,Trail Backpack,Outdoor,3,89.00,0,267.00
+1110,2025-12-11,West,Online,Returning,Trail Backpack,Outdoor,3,89.00,0,267.00
+1111,2025-05-23,East,In store,Returning,Resistance Bands,Fitness,1,18.75,0,18.75
+1112,2025-06-28,North,Online,New,Resistance Bands,Fitness,1,18.75,0,18.75
+1113,2025-05-28,West,Online,Returning,Resistance Bands,Fitness,2,18.75,0,37.50
+1114,2025-05-10,South,Online,Returning,Smart Watch,Electronics,1,199.00,0.2,159.20
+1115,2025-08-25,South,In store,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1116,2025-04-15,North,In store,New,Trail Backpack,Outdoor,1,89.00,0,89.00
+1117,2025-12-30,East,Online,New,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1118,2025-08-25,North,In store,Returning,Insulated Bottle,Outdoor,4,24.50,0,98.00
+1119,2025-08-01,North,Online,New,Portable Charger,Electronics,3,34.99,0.2,83.98
+1120,2025-03-11,West,In store,New,Running Shoes,Fitness,4,119.00,0,476.00
+1121,2025-05-17,North,In store,Returning,Running Shoes,Fitness,3,119.00,0,357.00
+1122,2025-10-03,West,In store,Returning,Resistance Bands,Fitness,2,18.75,0,37.50
+1123,2025-04-07,South,In store,New,Smart Watch,Electronics,5,199.00,0,995.00
+1124,2025-12-28,West,Online,Returning,Resistance Bands,Fitness,4,18.75,0,75.00
+1125,2025-03-06,West,In store,New,Trail Backpack,Outdoor,2,89.00,0,178.00
+1126,2025-01-08,East,Online,New,Resistance Bands,Fitness,3,18.75,0,56.25
+1127,2025-06-23,North,In store,Returning,Portable Charger,Electronics,2,34.99,0,69.98
+1128,2025-07-14,West,In store,Returning,Running Shoes,Fitness,5,119.00,0,595.00
+1129,2025-11-13,West,Online,Returning,Trail Backpack,Outdoor,1,89.00,0,89.00
+1130,2025-02-20,North,Online,Returning,Yoga Mat,Fitness,3,29.00,0.1,78.30
+1131,2025-01-24,South,In store,New,Trail Backpack,Outdoor,1,89.00,0,89.00
+1132,2025-07-30,North,Online,Returning,Running Shoes,Fitness,2,119.00,0.1,214.20
+1133,2025-11-14,East,Online,Returning,Yoga Mat,Fitness,2,29.00,0,58.00
+1134,2025-08-24,West,In store,Returning,Portable Charger,Electronics,1,34.99,0,34.99
+1135,2025-02-07,East,In store,Returning,Camping Lantern,Outdoor,1,39.99,0,39.99
+1136,2025-06-04,South,Online,New,Resistance Bands,Fitness,1,18.75,0,18.75
+1137,2025-10-22,North,In store,New,Smart Watch,Electronics,1,199.00,0,199.00
+1138,2025-11-07,West,Online,Returning,Trail Backpack,Outdoor,3,89.00,0.1,240.30
+1139,2025-04-23,East,Online,Returning,Smart Watch,Electronics,2,199.00,0,398.00
+1140,2025-06-08,South,Online,New,Trail Backpack,Outdoor,3,89.00,0,267.00
+1141,2025-06-17,North,In store,Returning,Portable Charger,Electronics,3,34.99,0,104.97
+1142,2025-03-26,South,In store,Returning,Portable Charger,Electronics,1,34.99,0.1,31.49
+1143,2025-02-28,West,Online,Returning,Smart Watch,Electronics,2,199.00,0,398.00
+1144,2025-10-13,North,Online,Returning,Yoga Mat,Fitness,1,29.00,0.1,26.10
+1145,2025-10-27,South,Online,Returning,Portable Charger,Electronics,1,34.99,0,34.99
+1146,2025-06-17,North,In store,Returning,Running Shoes,Fitness,4,119.00,0,476.00
+1147,2025-11-29,West,In store,Returning,Portable Charger,Electronics,1,34.99,0,34.99
+1148,2025-02-19,South,In store,Returning,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1149,2025-08-03,West,Online,Returning,Running Shoes,Fitness,2,119.00,0.1,214.20
+1150,2025-05-24,South,Online,Returning,Yoga Mat,Fitness,1,29.00,0,29.00
+1151,2025-12-18,East,Online,New,Insulated Bottle,Outdoor,1,24.50,0.2,19.60
+1152,2025-03-04,North,Online,Returning,Wireless Earbuds,Electronics,4,79.00,0.1,284.40
+1153,2025-01-26,North,Online,New,Trail Backpack,Outdoor,3,89.00,0,267.00
+1154,2025-04-17,North,Online,Returning,Running Shoes,Fitness,2,119.00,0.1,214.20
+1155,2025-05-22,North,In store,Returning,Trail Backpack,Outdoor,4,89.00,0,356.00
+1156,2025-12-05,South,Online,Returning,Insulated Bottle,Outdoor,4,24.50,0,98.00
+1157,2025-03-31,South,Online,Returning,Trail Backpack,Outdoor,1,89.00,0,89.00
+1158,2025-08-18,North,Online,Returning,Resistance Bands,Fitness,3,18.75,0,56.25
+1159,2025-12-04,West,Online,Returning,Trail Backpack,Outdoor,2,89.00,0,178.00
+1160,2025-08-07,West,Online,Returning,Yoga Mat,Fitness,2,29.00,0,58.00
+1161,2025-11-08,East,In store,New,Smart Watch,Electronics,1,199.00,0,199.00
+1162,2025-05-31,North,Online,Returning,Running Shoes,Fitness,2,119.00,0,238.00
+1163,2025-04-21,South,In store,New,Running Shoes,Fitness,1,119.00,0.1,107.10
+1164,2025-06-10,South,Online,Returning,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1165,2025-02-04,South,In store,Returning,Resistance Bands,Fitness,1,18.75,0,18.75
+1166,2025-01-31,South,Online,Returning,Running Shoes,Fitness,2,119.00,0,238.00
+1167,2025-01-27,South,Online,New,Yoga Mat,Fitness,5,29.00,0,145.00
+1168,2025-04-25,East,Online,Returning,Resistance Bands,Fitness,3,18.75,0,56.25
+1169,2025-08-08,West,Online,Returning,Wireless Earbuds,Electronics,3,79.00,0.2,189.60
+1170,2025-01-15,South,In store,New,Portable Charger,Electronics,1,34.99,0.1,31.49
+1171,2025-03-15,North,Online,New,Camping Lantern,Outdoor,2,39.99,0,79.98
+1172,2025-04-21,North,In store,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1173,2025-01-27,North,Online,New,Insulated Bottle,Outdoor,1,24.50,0.1,22.05
+1174,2025-09-06,North,Online,New,Yoga Mat,Fitness,2,29.00,0,58.00
+1175,2025-05-26,East,In store,New,Insulated Bottle,Outdoor,2,24.50,0,49.00
+1176,2025-11-03,West,Online,Returning,Yoga Mat,Fitness,1,29.00,0,29.00
+1177,2025-06-17,South,Online,New,Portable Charger,Electronics,1,34.99,0,34.99
+1178,2025-09-14,South,In store,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1179,2025-08-12,West,In store,Returning,Trail Backpack,Outdoor,1,89.00,0.2,71.20
+1180,2025-05-29,South,In store,Returning,Yoga Mat,Fitness,1,29.00,0,29.00
+1181,2025-02-15,South,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1182,2025-06-08,West,Online,Returning,Yoga Mat,Fitness,3,29.00,0,87.00
+1183,2025-09-29,South,Online,New,Insulated Bottle,Outdoor,2,24.50,0.2,39.20
+1184,2025-05-12,West,Online,New,Camping Lantern,Outdoor,1,39.99,0,39.99
+1185,2025-08-26,South,In store,Returning,Resistance Bands,Fitness,3,18.75,0.1,50.62
+1186,2025-03-19,East,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1187,2025-09-17,North,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1188,2025-11-27,East,In store,Returning,Insulated Bottle,Outdoor,4,24.50,0.1,88.20
+1189,2025-01-22,East,In store,Returning,Running Shoes,Fitness,1,119.00,0.1,107.10
+1190,2025-03-19,West,In store,Returning,Running Shoes,Fitness,5,119.00,0,595.00
+1191,2025-09-16,East,In store,Returning,Insulated Bottle,Outdoor,2,24.50,0,49.00
+1192,2025-07-06,South,In store,Returning,Camping Lantern,Outdoor,1,39.99,0,39.99
+1193,2025-11-20,North,In store,New,Trail Backpack,Outdoor,2,89.00,0,178.00
+1194,2025-06-20,West,In store,Returning,Camping Lantern,Outdoor,1,39.99,0,39.99
+1195,2025-03-08,South,In store,Returning,Yoga Mat,Fitness,2,29.00,0.2,46.40
+1196,2025-03-07,East,Online,Returning,Smart Watch,Electronics,2,199.00,0.1,358.20
+1197,2025-09-18,North,Online,New,Yoga Mat,Fitness,1,29.00,0,29.00
+1198,2025-04-09,North,Online,Returning,Resistance Bands,Fitness,1,18.75,0,18.75
+1199,2025-09-27,West,Online,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1200,2025-03-25,East,Online,Returning,Camping Lantern,Outdoor,1,39.99,0,39.99
+1201,2025-07-30,West,In store,Returning,Trail Backpack,Outdoor,1,89.00,0.1,80.10
+1202,2025-04-30,West,In store,Returning,Resistance Bands,Fitness,2,18.75,0,37.50
+1203,2025-07-08,South,In store,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1204,2025-09-28,North,Online,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1205,2025-11-25,West,Online,New,Trail Backpack,Outdoor,2,89.00,0,178.00
+1206,2025-05-20,West,Online,Returning,Camping Lantern,Outdoor,1,39.99,0,39.99
+1207,2025-08-19,South,In store,Returning,Wireless Earbuds,Electronics,4,79.00,0.2,252.80
+1208,2025-07-17,North,Online,Returning,Wireless Earbuds,Electronics,5,79.00,0,395.00
+1209,2025-03-16,West,Online,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1210,2025-08-18,North,Online,Returning,Resistance Bands,Fitness,2,18.75,0.2,30.00
+1211,2025-11-08,North,In store,New,Running Shoes,Fitness,2,119.00,0,238.00
+1212,2025-08-03,North,In store,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1213,2025-11-20,North,In store,New,Trail Backpack,Outdoor,2,89.00,0,178.00
+1214,2025-05-04,East,In store,New,Smart Watch,Electronics,2,199.00,0,398.00
+1215,2025-10-06,East,In store,Returning,Running Shoes,Fitness,2,119.00,0.2,190.40
+1216,2025-11-22,East,In store,Returning,Trail Backpack,Outdoor,1,89.00,0,89.00
+1217,2025-05-04,West,In store,New,Smart Watch,Electronics,3,199.00,0,597.00
+1218,2025-10-07,West,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1219,2025-11-20,East,In store,New,Resistance Bands,Fitness,1,18.75,0,18.75
+1220,2025-01-23,South,In store,Returning,Wireless Earbuds,Electronics,3,79.00,0.1,213.30
+1221,2025-08-31,North,In store,Returning,Running Shoes,Fitness,1,119.00,0.1,107.10
+1222,2025-12-02,South,In store,Returning,Trail Backpack,Outdoor,1,89.00,0,89.00
+1223,2025-06-23,South,In store,Returning,Yoga Mat,Fitness,5,29.00,0,145.00
+1224,2025-02-10,North,In store,New,Yoga Mat,Fitness,1,29.00,0.2,23.20
+1225,2025-06-17,East,In store,New,Insulated Bottle,Outdoor,2,24.50,0,49.00
+1226,2025-06-29,West,In store,New,Resistance Bands,Fitness,1,18.75,0.1,16.88
+1227,2025-02-08,East,Online,Returning,Trail Backpack,Outdoor,2,89.00,0,178.00
+1228,2025-11-08,North,Online,Returning,Camping Lantern,Outdoor,2,39.99,0,79.98
+1229,2025-07-05,East,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1230,2025-08-16,East,In store,New,Smart Watch,Electronics,3,199.00,0,597.00
+1231,2025-05-08,North,In store,Returning,Portable Charger,Electronics,5,34.99,0,174.95
+1232,2025-05-15,North,In store,Returning,Insulated Bottle,Outdoor,3,24.50,0.1,66.15
+1233,2025-04-13,South,In store,Returning,Resistance Bands,Fitness,1,18.75,0.1,16.88
+1234,2025-12-08,East,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1235,2025-07-05,North,Online,New,Camping Lantern,Outdoor,2,39.99,0,79.98
+1236,2025-01-14,South,Online,Returning,Resistance Bands,Fitness,1,18.75,0,18.75
+1237,2025-02-03,East,In store,Returning,Insulated Bottle,Outdoor,1,24.50,0.2,19.60
+1238,2025-03-06,South,In store,New,Insulated Bottle,Outdoor,5,24.50,0,122.50
+1239,2025-11-24,North,Online,Returning,Running Shoes,Fitness,2,119.00,0.1,214.20
+1240,2025-03-20,West,Online,New,Running Shoes,Fitness,1,119.00,0,119.00
+1241,2025-05-26,East,In store,New,Running Shoes,Fitness,3,119.00,0,357.00
+1242,2025-11-11,North,Online,New,Portable Charger,Electronics,2,34.99,0,69.98
+1243,2025-10-16,North,In store,Returning,Smart Watch,Electronics,1,199.00,0.1,179.10
+1244,2025-11-13,East,In store,Returning,Yoga Mat,Fitness,2,29.00,0,58.00
+1245,2025-09-05,South,In store,New,Portable Charger,Electronics,1,34.99,0.1,31.49
+1246,2025-03-22,North,Online,New,Trail Backpack,Outdoor,1,89.00,0,89.00
+1247,2025-06-26,South,Online,New,Smart Watch,Electronics,5,199.00,0,995.00
+1248,2025-03-04,North,In store,Returning,Resistance Bands,Fitness,1,18.75,0,18.75
+1249,2025-05-08,West,In store,New,Yoga Mat,Fitness,5,29.00,0.2,116.00
+1250,2025-09-13,West,In store,New,Camping Lantern,Outdoor,5,39.99,0,199.95
+1251,2025-09-16,East,Online,New,Yoga Mat,Fitness,2,29.00,0,58.00
+1252,2025-11-02,South,Online,Returning,Resistance Bands,Fitness,4,18.75,0,75.00
+1253,2025-03-10,West,In store,New,Yoga Mat,Fitness,4,29.00,0.1,104.40
+1254,2025-10-19,North,In store,Returning,Trail Backpack,Outdoor,2,89.00,0,178.00
+1255,2025-05-24,East,Online,Returning,Running Shoes,Fitness,3,119.00,0,357.00
+1256,2025-07-11,West,Online,New,Yoga Mat,Fitness,3,29.00,0,87.00
+1257,2025-07-25,North,In store,Returning,Running Shoes,Fitness,2,119.00,0,238.00
+1258,2025-08-22,North,In store,New,Running Shoes,Fitness,1,119.00,0.1,107.10
+1259,2025-10-31,East,In store,Returning,Portable Charger,Electronics,1,34.99,0.1,31.49
+1260,2025-07-08,South,In store,Returning,Trail Backpack,Outdoor,1,89.00,0,89.00
+1261,2025-11-02,West,Online,Returning,Trail Backpack,Outdoor,2,89.00,0.2,142.40
+1262,2025-03-29,West,In store,New,Resistance Bands,Fitness,2,18.75,0.1,33.75
+1263,2025-01-17,North,In store,New,Wireless Earbuds,Electronics,2,79.00,0.1,142.20
+1264,2025-07-31,West,In store,Returning,Camping Lantern,Outdoor,2,39.99,0,79.98
+1265,2025-12-28,South,In store,Returning,Trail Backpack,Outdoor,1,89.00,0,89.00
+1266,2025-03-30,East,In store,Returning,Smart Watch,Electronics,2,199.00,0,398.00
+1267,2025-05-07,West,In store,Returning,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1268,2025-12-20,South,In store,New,Wireless Earbuds,Electronics,3,79.00,0,237.00
+1269,2025-07-14,South,Online,New,Running Shoes,Fitness,4,119.00,0,476.00
+1270,2025-02-10,North,In store,New,Portable Charger,Electronics,1,34.99,0,34.99
+1271,2025-05-19,North,Online,New,Running Shoes,Fitness,4,119.00,0,476.00
+1272,2025-04-26,South,In store,New,Running Shoes,Fitness,2,119.00,0,238.00
+1273,2025-01-03,North,In store,Returning,Camping Lantern,Outdoor,5,39.99,0.2,159.96
+1274,2025-05-28,West,Online,Returning,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1275,2025-10-01,North,Online,Returning,Wireless Earbuds,Electronics,3,79.00,0.1,213.30
+1276,2025-01-19,South,In store,Returning,Camping Lantern,Outdoor,5,39.99,0,199.95
+1277,2025-06-02,West,In store,Returning,Trail Backpack,Outdoor,2,89.00,0,178.00
+1278,2025-09-26,West,In store,New,Running Shoes,Fitness,2,119.00,0.2,190.40
+1279,2025-06-19,North,Online,New,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1280,2025-06-01,North,In store,Returning,Smart Watch,Electronics,2,199.00,0.1,358.20
+1281,2025-06-17,North,Online,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1282,2025-01-04,West,In store,New,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1283,2025-05-14,North,Online,Returning,Trail Backpack,Outdoor,2,89.00,0,178.00
+1284,2025-07-27,West,In store,Returning,Camping Lantern,Outdoor,2,39.99,0.2,63.98
+1285,2025-07-08,North,Online,Returning,Portable Charger,Electronics,2,34.99,0,69.98
+1286,2025-08-01,West,Online,Returning,Smart Watch,Electronics,3,199.00,0.2,477.60
+1287,2025-09-27,North,Online,New,Insulated Bottle,Outdoor,1,24.50,0.1,22.05
+1288,2025-09-16,North,In store,New,Running Shoes,Fitness,1,119.00,0,119.00
+1289,2025-10-26,South,Online,Returning,Wireless Earbuds,Electronics,2,79.00,0.1,142.20
+1290,2025-08-01,South,In store,Returning,Running Shoes,Fitness,2,119.00,0,238.00
+1291,2025-05-11,East,Online,Returning,Yoga Mat,Fitness,3,29.00,0.1,78.30
+1292,2025-10-05,North,In store,New,Insulated Bottle,Outdoor,5,24.50,0.2,98.00
+1293,2025-04-03,West,In store,New,Yoga Mat,Fitness,3,29.00,0.1,78.30
+1294,2025-08-18,South,Online,Returning,Yoga Mat,Fitness,4,29.00,0.2,92.80
+1295,2025-03-02,East,Online,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1296,2025-06-02,South,In store,Returning,Trail Backpack,Outdoor,2,89.00,0.1,160.20
+1297,2025-08-24,West,Online,New,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1298,2025-11-11,North,Online,New,Yoga Mat,Fitness,3,29.00,0.1,78.30
+1299,2025-08-17,North,Online,Returning,Trail Backpack,Outdoor,2,89.00,0.1,160.20
+1300,2025-10-04,North,In store,New,Wireless Earbuds,Electronics,1,79.00,0.1,71.10
+1301,2025-10-23,South,In store,Returning,Smart Watch,Electronics,2,199.00,0,398.00
+1302,2025-04-24,East,Online,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1303,2025-10-12,West,In store,Returning,Yoga Mat,Fitness,2,29.00,0.2,46.40
+1304,2025-12-23,South,In store,New,Smart Watch,Electronics,1,199.00,0,199.00
+1305,2025-06-03,South,Online,Returning,Wireless Earbuds,Electronics,4,79.00,0,316.00
+1306,2025-10-13,North,In store,Returning,Yoga Mat,Fitness,2,29.00,0,58.00
+1307,2025-07-09,North,In store,New,Resistance Bands,Fitness,1,18.75,0.1,16.88
+1308,2025-02-07,East,Online,Returning,Trail Backpack,Outdoor,1,89.00,0.1,80.10
+1309,2025-06-05,West,Online,Returning,Smart Watch,Electronics,5,199.00,0,995.00
+1310,2025-05-05,South,Online,Returning,Resistance Bands,Fitness,2,18.75,0.1,33.75
+1311,2025-07-14,South,In store,Returning,Portable Charger,Electronics,2,34.99,0,69.98
+1312,2025-08-27,South,In store,Returning,Resistance Bands,Fitness,1,18.75,0.2,15.00
+1313,2025-06-10,North,Online,New,Smart Watch,Electronics,1,199.00,0,199.00
+1314,2025-10-27,North,In store,New,Running Shoes,Fitness,2,119.00,0,238.00
+1315,2025-09-13,South,In store,Returning,Wireless Earbuds,Electronics,2,79.00,0.2,126.40
+1316,2025-08-24,North,In store,New,Resistance Bands,Fitness,1,18.75,0.1,16.88
+1317,2025-11-25,West,Online,Returning,Running Shoes,Fitness,5,119.00,0,595.00
+1318,2025-01-04,North,Online,New,Trail Backpack,Outdoor,1,89.00,0.1,80.10
+1319,2025-08-22,East,In store,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1320,2025-01-04,North,In store,Returning,Trail Backpack,Outdoor,2,89.00,0,178.00
+1321,2025-01-09,South,Online,New,Portable Charger,Electronics,2,34.99,0,69.98
+1322,2025-09-26,East,In store,New,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1323,2025-02-10,East,Online,New,Yoga Mat,Fitness,1,29.00,0,29.00
+1324,2025-12-01,North,In store,New,Insulated Bottle,Outdoor,5,24.50,0,122.50
+1325,2025-09-01,North,In store,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1326,2025-10-17,West,Online,New,Smart Watch,Electronics,5,199.00,0.2,796.00
+1327,2025-05-19,West,Online,New,Resistance Bands,Fitness,1,18.75,0,18.75
+1328,2025-01-09,West,In store,Returning,Smart Watch,Electronics,5,199.00,0,995.00
+1329,2025-03-25,West,In store,New,Portable Charger,Electronics,2,34.99,0,69.98
+1330,2025-12-19,West,Online,New,Camping Lantern,Outdoor,3,39.99,0,119.97
+1331,2025-02-08,West,In store,Returning,Wireless Earbuds,Electronics,1,79.00,0.1,71.10
+1332,2025-01-16,South,Online,New,Smart Watch,Electronics,2,199.00,0.1,358.20
+1333,2025-08-10,South,In store,Returning,Yoga Mat,Fitness,1,29.00,0,29.00
+1334,2025-02-12,West,Online,Returning,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1335,2025-07-04,South,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1336,2025-03-09,East,In store,New,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1337,2025-07-01,West,In store,New,Insulated Bottle,Outdoor,2,24.50,0,49.00
+1338,2025-07-18,East,Online,Returning,Yoga Mat,Fitness,3,29.00,0.1,78.30
+1339,2025-12-17,South,In store,New,Camping Lantern,Outdoor,1,39.99,0,39.99
+1340,2025-08-11,West,In store,New,Camping Lantern,Outdoor,1,39.99,0,39.99
+1341,2025-11-17,South,Online,New,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1342,2025-06-20,West,In store,New,Yoga Mat,Fitness,3,29.00,0,87.00
+1343,2025-06-03,North,In store,New,Camping Lantern,Outdoor,1,39.99,0.2,31.99
+1344,2025-06-13,South,Online,New,Yoga Mat,Fitness,1,29.00,0,29.00
+1345,2025-07-21,North,Online,Returning,Portable Charger,Electronics,1,34.99,0.2,27.99
+1346,2025-01-14,East,In store,Returning,Running Shoes,Fitness,5,119.00,0,595.00
+1347,2025-07-29,South,In store,Returning,Insulated Bottle,Outdoor,2,24.50,0,49.00
+1348,2025-07-13,South,In store,Returning,Yoga Mat,Fitness,1,29.00,0.2,23.20
+1349,2025-10-06,East,Online,New,Yoga Mat,Fitness,1,29.00,0.2,23.20
+1350,2025-12-03,East,In store,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1351,2025-08-09,North,Online,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1352,2025-08-26,East,In store,Returning,Yoga Mat,Fitness,3,29.00,0,87.00
+1353,2025-02-23,North,Online,New,Resistance Bands,Fitness,1,18.75,0.2,15.00
+1354,2025-08-22,South,Online,Returning,Smart Watch,Electronics,3,199.00,0,597.00
+1355,2025-06-13,East,Online,Returning,Resistance Bands,Fitness,1,18.75,0,18.75
+1356,2025-12-13,East,Online,Returning,Insulated Bottle,Outdoor,3,24.50,0.2,58.80
+1357,2025-10-14,West,Online,New,Smart Watch,Electronics,1,199.00,0,199.00
+1358,2025-07-22,North,In store,New,Yoga Mat,Fitness,1,29.00,0,29.00
+1359,2025-04-16,West,Online,Returning,Wireless Earbuds,Electronics,1,79.00,0.1,71.10
+1360,2025-04-06,North,In store,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1361,2025-11-02,North,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1362,2025-12-11,East,Online,Returning,Camping Lantern,Outdoor,3,39.99,0,119.97
+1363,2025-03-02,South,Online,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1364,2025-11-02,North,Online,Returning,Yoga Mat,Fitness,1,29.00,0,29.00
+1365,2025-05-28,South,Online,Returning,Resistance Bands,Fitness,1,18.75,0,18.75
+1366,2025-09-06,West,In store,Returning,Trail Backpack,Outdoor,1,89.00,0.1,80.10
+1367,2025-08-01,North,Online,Returning,Resistance Bands,Fitness,3,18.75,0,56.25
+1368,2025-05-30,North,In store,Returning,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1369,2025-10-09,North,In store,Returning,Resistance Bands,Fitness,2,18.75,0,37.50
+1370,2025-08-14,North,Online,New,Trail Backpack,Outdoor,2,89.00,0.2,142.40
+1371,2025-08-19,North,Online,Returning,Trail Backpack,Outdoor,1,89.00,0.1,80.10
+1372,2025-04-18,South,In store,New,Wireless Earbuds,Electronics,3,79.00,0,237.00
+1373,2025-04-16,East,In store,Returning,Camping Lantern,Outdoor,3,39.99,0.1,107.97
+1374,2025-06-15,East,Online,New,Camping Lantern,Outdoor,5,39.99,0,199.95
+1375,2025-01-31,North,Online,New,Yoga Mat,Fitness,5,29.00,0.1,130.50
+1376,2025-05-07,South,In store,Returning,Smart Watch,Electronics,3,199.00,0,597.00
+1377,2025-08-20,West,In store,Returning,Yoga Mat,Fitness,1,29.00,0.1,26.10
+1378,2025-12-22,West,In store,Returning,Portable Charger,Electronics,4,34.99,0,139.96
+1379,2025-08-23,West,In store,New,Insulated Bottle,Outdoor,2,24.50,0,49.00
+1380,2025-04-19,North,Online,Returning,Yoga Mat,Fitness,2,29.00,0,58.00
+1381,2025-06-25,North,In store,New,Resistance Bands,Fitness,4,18.75,0.1,67.50
+1382,2025-08-14,South,Online,Returning,Camping Lantern,Outdoor,2,39.99,0.2,63.98
+1383,2025-03-23,North,In store,New,Portable Charger,Electronics,4,34.99,0.1,125.96
+1384,2025-12-07,South,In store,Returning,Smart Watch,Electronics,4,199.00,0,796.00
+1385,2025-08-08,North,In store,New,Wireless Earbuds,Electronics,2,79.00,0.1,142.20
+1386,2025-09-23,East,Online,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1387,2025-12-22,South,Online,New,Yoga Mat,Fitness,1,29.00,0,29.00
+1388,2025-06-03,West,Online,Returning,Smart Watch,Electronics,1,199.00,0.1,179.10
+1389,2025-02-05,East,In store,New,Camping Lantern,Outdoor,2,39.99,0,79.98
+1390,2025-11-18,East,In store,Returning,Wireless Earbuds,Electronics,3,79.00,0.2,189.60
+1391,2025-02-21,East,In store,Returning,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1392,2025-03-13,North,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1393,2025-12-04,East,Online,Returning,Trail Backpack,Outdoor,4,89.00,0,356.00
+1394,2025-11-27,West,In store,New,Portable Charger,Electronics,1,34.99,0.1,31.49
+1395,2025-09-13,West,Online,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1396,2025-03-09,South,Online,Returning,Smart Watch,Electronics,1,199.00,0.1,179.10
+1397,2025-01-09,North,Online,Returning,Insulated Bottle,Outdoor,2,24.50,0,49.00
+1398,2025-09-17,West,In store,Returning,Yoga Mat,Fitness,1,29.00,0.1,26.10
+1399,2025-11-24,North,In store,New,Insulated Bottle,Outdoor,2,24.50,0,49.00
+1400,2025-03-21,East,Online,New,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1401,2025-05-03,South,In store,Returning,Yoga Mat,Fitness,1,29.00,0,29.00
+1402,2025-06-08,North,Online,Returning,Trail Backpack,Outdoor,2,89.00,0,178.00
+1403,2025-03-25,East,In store,New,Trail Backpack,Outdoor,2,89.00,0,178.00
+1404,2025-05-18,West,In store,Returning,Camping Lantern,Outdoor,3,39.99,0,119.97
+1405,2025-09-26,East,Online,Returning,Portable Charger,Electronics,1,34.99,0.1,31.49
+1406,2025-07-04,North,Online,New,Running Shoes,Fitness,1,119.00,0.1,107.10
+1407,2025-10-21,East,Online,New,Insulated Bottle,Outdoor,2,24.50,0,49.00
+1408,2025-05-06,West,Online,Returning,Trail Backpack,Outdoor,1,89.00,0,89.00
+1409,2025-10-11,East,Online,New,Trail Backpack,Outdoor,3,89.00,0.1,240.30
+1410,2025-06-13,South,Online,New,Yoga Mat,Fitness,1,29.00,0,29.00
+1411,2025-01-24,South,In store,Returning,Running Shoes,Fitness,5,119.00,0,595.00
+1412,2025-06-17,South,In store,Returning,Portable Charger,Electronics,1,34.99,0,34.99
+1413,2025-11-15,West,Online,Returning,Portable Charger,Electronics,1,34.99,0,34.99
+1414,2025-05-06,North,In store,Returning,Running Shoes,Fitness,1,119.00,0.2,95.20
+1415,2025-06-21,West,In store,New,Trail Backpack,Outdoor,1,89.00,0,89.00
+1416,2025-05-02,West,Online,Returning,Running Shoes,Fitness,1,119.00,0.2,95.20
+1417,2025-01-23,East,In store,Returning,Insulated Bottle,Outdoor,4,24.50,0.1,88.20
+1418,2025-10-25,West,Online,Returning,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1419,2025-08-11,North,In store,Returning,Trail Backpack,Outdoor,2,89.00,0,178.00
+1420,2025-12-25,South,Online,New,Yoga Mat,Fitness,3,29.00,0,87.00
+1421,2025-03-11,North,Online,Returning,Wireless Earbuds,Electronics,3,79.00,0,237.00
+1422,2025-07-28,West,In store,New,Smart Watch,Electronics,1,199.00,0,199.00
+1423,2025-03-03,South,Online,New,Portable Charger,Electronics,1,34.99,0.1,31.49
+1424,2025-03-17,South,Online,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1425,2025-03-31,South,Online,New,Portable Charger,Electronics,1,34.99,0,34.99
+1426,2025-03-13,West,Online,New,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1427,2025-07-10,North,In store,Returning,Yoga Mat,Fitness,2,29.00,0.2,46.40
+1428,2025-01-12,East,Online,New,Insulated Bottle,Outdoor,5,24.50,0,122.50
+1429,2025-03-04,North,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1430,2025-09-12,North,Online,Returning,Yoga Mat,Fitness,1,29.00,0,29.00
+1431,2025-05-24,East,Online,Returning,Portable Charger,Electronics,1,34.99,0,34.99
+1432,2025-07-30,North,In store,New,Resistance Bands,Fitness,4,18.75,0,75.00
+1433,2025-11-26,East,Online,Returning,Wireless Earbuds,Electronics,4,79.00,0,316.00
+1434,2025-09-03,West,In store,New,Smart Watch,Electronics,2,199.00,0,398.00
+1435,2025-01-14,West,In store,New,Camping Lantern,Outdoor,1,39.99,0,39.99
+1436,2025-09-29,North,Online,New,Resistance Bands,Fitness,1,18.75,0,18.75
+1437,2025-05-17,East,Online,Returning,Wireless Earbuds,Electronics,2,79.00,0.1,142.20
+1438,2025-07-01,North,Online,Returning,Yoga Mat,Fitness,4,29.00,0.2,92.80
+1439,2025-10-30,West,Online,Returning,Smart Watch,Electronics,1,199.00,0.1,179.10
+1440,2025-09-10,North,Online,New,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1441,2025-01-11,West,Online,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1442,2025-04-01,South,Online,New,Smart Watch,Electronics,4,199.00,0.1,716.40
+1443,2025-02-26,West,In store,Returning,Camping Lantern,Outdoor,3,39.99,0.1,107.97
+1444,2025-10-28,North,Online,Returning,Yoga Mat,Fitness,1,29.00,0,29.00
+1445,2025-11-24,North,In store,New,Yoga Mat,Fitness,5,29.00,0,145.00
+1446,2025-07-13,North,Online,Returning,Camping Lantern,Outdoor,1,39.99,0,39.99
+1447,2025-10-18,West,Online,Returning,Yoga Mat,Fitness,1,29.00,0,29.00
+1448,2025-09-12,North,In store,New,Insulated Bottle,Outdoor,1,24.50,0.1,22.05
+1449,2025-12-29,South,Online,New,Insulated Bottle,Outdoor,2,24.50,0.1,44.10
+1450,2025-12-21,North,Online,New,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1451,2025-08-03,South,In store,New,Resistance Bands,Fitness,5,18.75,0.1,84.38
+1452,2025-02-21,East,Online,New,Yoga Mat,Fitness,3,29.00,0.1,78.30
+1453,2025-01-18,West,Online,New,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1454,2025-03-24,West,Online,New,Yoga Mat,Fitness,3,29.00,0,87.00
+1455,2025-12-27,North,In store,New,Resistance Bands,Fitness,1,18.75,0.2,15.00
+1456,2025-06-19,East,In store,Returning,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1457,2025-05-02,East,In store,New,Portable Charger,Electronics,1,34.99,0,34.99
+1458,2025-01-02,East,In store,New,Smart Watch,Electronics,1,199.00,0,199.00
+1459,2025-04-16,North,Online,New,Trail Backpack,Outdoor,1,89.00,0,89.00
+1460,2025-08-30,North,In store,New,Yoga Mat,Fitness,2,29.00,0,58.00
+1461,2025-07-09,South,In store,New,Yoga Mat,Fitness,1,29.00,0,29.00
+1462,2025-10-16,East,Online,Returning,Portable Charger,Electronics,1,34.99,0.1,31.49
+1463,2025-07-31,East,In store,Returning,Running Shoes,Fitness,5,119.00,0,595.00
+1464,2025-10-02,East,Online,Returning,Yoga Mat,Fitness,2,29.00,0.2,46.40
+1465,2025-07-22,East,Online,New,Insulated Bottle,Outdoor,4,24.50,0.1,88.20
+1466,2025-03-30,North,Online,New,Resistance Bands,Fitness,4,18.75,0,75.00
+1467,2025-02-10,West,Online,Returning,Yoga Mat,Fitness,5,29.00,0,145.00
+1468,2025-06-13,North,In store,Returning,Portable Charger,Electronics,4,34.99,0.2,111.97
+1469,2025-06-16,West,Online,Returning,Running Shoes,Fitness,4,119.00,0,476.00
+1470,2025-08-03,East,Online,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1471,2025-05-27,West,In store,New,Insulated Bottle,Outdoor,4,24.50,0.1,88.20
+1472,2025-10-20,North,Online,Returning,Resistance Bands,Fitness,2,18.75,0,37.50
+1473,2025-01-20,East,Online,Returning,Yoga Mat,Fitness,1,29.00,0.1,26.10
+1474,2025-07-10,South,In store,Returning,Portable Charger,Electronics,1,34.99,0.1,31.49
+1475,2025-04-27,South,In store,New,Insulated Bottle,Outdoor,1,24.50,0.2,19.60
+1476,2025-11-06,North,In store,Returning,Yoga Mat,Fitness,2,29.00,0,58.00
+1477,2025-07-11,North,In store,Returning,Running Shoes,Fitness,3,119.00,0,357.00
+1478,2025-03-11,East,Online,New,Yoga Mat,Fitness,3,29.00,0,87.00
+1479,2025-01-30,West,Online,New,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1480,2025-09-16,East,Online,New,Resistance Bands,Fitness,1,18.75,0.2,15.00
+1481,2025-04-01,East,In store,New,Resistance Bands,Fitness,5,18.75,0,93.75
+1482,2025-12-19,North,Online,Returning,Portable Charger,Electronics,1,34.99,0,34.99
+1483,2025-12-13,East,Online,Returning,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1484,2025-11-28,North,In store,Returning,Camping Lantern,Outdoor,1,39.99,0.1,35.99
+1485,2025-08-05,South,Online,Returning,Portable Charger,Electronics,4,34.99,0.1,125.96
+1486,2025-11-16,East,In store,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1487,2025-06-02,South,In store,Returning,Portable Charger,Electronics,2,34.99,0,69.98
+1488,2025-05-14,East,Online,New,Portable Charger,Electronics,2,34.99,0.2,55.98
+1489,2025-01-30,East,In store,Returning,Wireless Earbuds,Electronics,3,79.00,0.1,213.30
+1490,2025-12-02,West,In store,New,Trail Backpack,Outdoor,2,89.00,0,178.00
+1491,2025-10-26,North,Online,Returning,Trail Backpack,Outdoor,3,89.00,0,267.00
+1492,2025-12-10,North,Online,New,Resistance Bands,Fitness,1,18.75,0,18.75
+1493,2025-03-07,East,Online,Returning,Resistance Bands,Fitness,3,18.75,0.1,50.62
+1494,2025-12-02,East,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1495,2025-07-10,West,In store,New,Smart Watch,Electronics,1,199.00,0,199.00
+1496,2025-08-30,West,In store,Returning,Insulated Bottle,Outdoor,4,24.50,0,98.00
+1497,2025-01-28,West,In store,Returning,Yoga Mat,Fitness,4,29.00,0,116.00
+1498,2025-03-15,West,In store,New,Resistance Bands,Fitness,1,18.75,0.1,16.88
+1499,2025-06-10,North,Online,Returning,Camping Lantern,Outdoor,2,39.99,0,79.98
+1500,2025-09-08,North,In store,Returning,Camping Lantern,Outdoor,3,39.99,0.1,107.97
+1501,2025-08-08,North,Online,Returning,Yoga Mat,Fitness,5,29.00,0,145.00
+1502,2025-06-14,North,Online,Returning,Trail Backpack,Outdoor,3,89.00,0,267.00
+1503,2025-04-26,North,In store,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1504,2025-03-27,West,In store,Returning,Portable Charger,Electronics,1,34.99,0,34.99
+1505,2025-06-22,North,In store,New,Running Shoes,Fitness,1,119.00,0,119.00
+1506,2025-03-26,South,Online,New,Wireless Earbuds,Electronics,4,79.00,0.2,252.80
+1507,2025-04-19,North,In store,Returning,Camping Lantern,Outdoor,3,39.99,0,119.97
+1508,2025-07-12,East,Online,Returning,Trail Backpack,Outdoor,4,89.00,0,356.00
+1509,2025-12-05,North,Online,Returning,Trail Backpack,Outdoor,1,89.00,0.1,80.10
+1510,2025-03-05,North,Online,New,Yoga Mat,Fitness,2,29.00,0,58.00
+1511,2025-12-06,East,In store,Returning,Insulated Bottle,Outdoor,2,24.50,0,49.00
+1512,2025-09-19,North,Online,Returning,Insulated Bottle,Outdoor,3,24.50,0,73.50
+1513,2025-05-15,South,In store,New,Wireless Earbuds,Electronics,3,79.00,0.2,189.60
+1514,2025-10-08,West,In store,New,Trail Backpack,Outdoor,2,89.00,0,178.00
+1515,2025-12-10,East,In store,New,Trail Backpack,Outdoor,1,89.00,0,89.00
+1516,2025-09-19,West,Online,Returning,Insulated Bottle,Outdoor,1,24.50,0.1,22.05
+1517,2025-05-16,North,Online,Returning,Portable Charger,Electronics,2,34.99,0,69.98
+1518,2025-12-13,North,Online,New,Smart Watch,Electronics,1,199.00,0.1,179.10
+1519,2025-12-06,West,In store,Returning,Camping Lantern,Outdoor,2,39.99,0,79.98
+1520,2025-07-10,South,In store,New,Insulated Bottle,Outdoor,3,24.50,0,73.50
+1521,2025-12-20,East,Online,New,Yoga Mat,Fitness,4,29.00,0.1,104.40
+1522,2025-03-23,South,In store,New,Trail Backpack,Outdoor,1,89.00,0.2,71.20
+1523,2025-07-03,West,Online,Returning,Yoga Mat,Fitness,2,29.00,0.1,52.20
+1524,2025-02-27,North,In store,New,Resistance Bands,Fitness,4,18.75,0,75.00
+1525,2025-10-23,West,In store,Returning,Running Shoes,Fitness,3,119.00,0,357.00
+1526,2025-08-10,South,In store,New,Insulated Bottle,Outdoor,2,24.50,0,49.00
+1527,2025-11-10,North,In store,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1528,2025-02-08,South,In store,New,Camping Lantern,Outdoor,3,39.99,0,119.97
+1529,2025-10-09,North,In store,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1530,2025-02-15,North,In store,Returning,Resistance Bands,Fitness,4,18.75,0,75.00
+1531,2025-02-22,East,Online,Returning,Trail Backpack,Outdoor,1,89.00,0,89.00
+1532,2025-09-18,South,In store,New,Portable Charger,Electronics,2,34.99,0,69.98
+1533,2025-04-25,West,In store,Returning,Trail Backpack,Outdoor,3,89.00,0,267.00
+1534,2025-08-20,North,In store,New,Smart Watch,Electronics,1,199.00,0.1,179.10
+1535,2025-10-08,North,Online,Returning,Portable Charger,Electronics,2,34.99,0.1,62.98
+1536,2025-02-24,North,In store,New,Yoga Mat,Fitness,1,29.00,0,29.00
+1537,2025-06-23,West,Online,Returning,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1538,2025-08-23,North,In store,New,Resistance Bands,Fitness,2,18.75,0.2,30.00
+1539,2025-10-11,South,Online,Returning,Trail Backpack,Outdoor,4,89.00,0.1,320.40
+1540,2025-03-07,East,In store,Returning,Camping Lantern,Outdoor,1,39.99,0,39.99
+1541,2025-08-03,West,In store,New,Yoga Mat,Fitness,5,29.00,0.2,116.00
+1542,2025-05-31,South,In store,Returning,Smart Watch,Electronics,2,199.00,0,398.00
+1543,2025-06-10,East,Online,New,Running Shoes,Fitness,3,119.00,0.2,285.60
+1544,2025-12-18,West,Online,Returning,Portable Charger,Electronics,1,34.99,0,34.99
+1545,2025-12-30,South,In store,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1546,2025-05-27,North,Online,New,Running Shoes,Fitness,4,119.00,0,476.00
+1547,2025-01-28,West,Online,Returning,Camping Lantern,Outdoor,2,39.99,0,79.98
+1548,2025-03-16,North,Online,New,Portable Charger,Electronics,3,34.99,0,104.97
+1549,2025-02-22,East,Online,Returning,Resistance Bands,Fitness,2,18.75,0,37.50
+1550,2025-07-19,West,In store,Returning,Running Shoes,Fitness,1,119.00,0.1,107.10
+1551,2025-07-15,West,In store,Returning,Trail Backpack,Outdoor,1,89.00,0.2,71.20
+1552,2025-01-07,West,In store,Returning,Trail Backpack,Outdoor,3,89.00,0,267.00
+1553,2025-10-29,West,Online,New,Smart Watch,Electronics,2,199.00,0,398.00
+1554,2025-12-16,East,Online,New,Camping Lantern,Outdoor,1,39.99,0.2,31.99
+1555,2025-05-23,East,In store,New,Yoga Mat,Fitness,2,29.00,0,58.00
+1556,2025-12-30,West,Online,Returning,Resistance Bands,Fitness,4,18.75,0,75.00
+1557,2025-09-09,North,In store,Returning,Portable Charger,Electronics,3,34.99,0,104.97
+1558,2025-09-24,South,In store,New,Camping Lantern,Outdoor,1,39.99,0,39.99
+1559,2025-04-20,North,In store,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1560,2025-02-28,West,Online,Returning,Trail Backpack,Outdoor,2,89.00,0,178.00
+1561,2025-07-15,South,In store,New,Smart Watch,Electronics,4,199.00,0.2,636.80
+1562,2025-07-11,South,In store,Returning,Running Shoes,Fitness,2,119.00,0,238.00
+1563,2025-06-14,North,Online,Returning,Wireless Earbuds,Electronics,2,79.00,0.2,126.40
+1564,2025-12-10,East,Online,New,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1565,2025-11-28,East,Online,Returning,Yoga Mat,Fitness,3,29.00,0,87.00
+1566,2025-01-20,West,Online,Returning,Smart Watch,Electronics,1,199.00,0,199.00
+1567,2025-05-13,South,In store,New,Wireless Earbuds,Electronics,1,79.00,0,79.00
+1568,2025-10-01,North,Online,Returning,Insulated Bottle,Outdoor,1,24.50,0.1,22.05
+1569,2025-07-03,West,In store,Returning,Insulated Bottle,Outdoor,4,24.50,0,98.00
+1570,2025-08-13,North,Online,Returning,Portable Charger,Electronics,1,34.99,0.1,31.49
+1571,2025-07-20,North,Online,New,Camping Lantern,Outdoor,3,39.99,0.1,107.97
+1572,2025-01-06,North,Online,Returning,Smart Watch,Electronics,2,199.00,0,398.00
+1573,2025-10-03,North,In store,New,Yoga Mat,Fitness,2,29.00,0,58.00
+1574,2025-03-14,West,Online,New,Running Shoes,Fitness,1,119.00,0,119.00
+1575,2025-10-09,North,Online,New,Trail Backpack,Outdoor,2,89.00,0,178.00
+1576,2025-10-25,North,Online,New,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1577,2025-04-10,East,In store,Returning,Insulated Bottle,Outdoor,1,24.50,0,24.50
+1578,2025-10-17,West,Online,New,Camping Lantern,Outdoor,2,39.99,0.1,71.98
+1579,2025-04-24,North,In store,New,Wireless Earbuds,Electronics,3,79.00,0,237.00
+1580,2025-09-03,South,Online,New,Smart Watch,Electronics,2,199.00,0,398.00
+1581,2025-05-24,East,In store,Returning,Insulated Bottle,Outdoor,4,24.50,0,98.00
+1582,2025-02-08,East,In store,Returning,Insulated Bottle,Outdoor,4,24.50,0.1,88.20
+1583,2025-01-19,West,In store,Returning,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1584,2025-07-07,East,In store,New,Camping Lantern,Outdoor,1,39.99,0.1,35.99
+1585,2025-09-19,North,Online,Returning,Running Shoes,Fitness,1,119.00,0,119.00
+1586,2025-09-21,East,Online,Returning,Camping Lantern,Outdoor,1,39.99,0,39.99
+1587,2025-07-03,North,In store,New,Resistance Bands,Fitness,1,18.75,0.1,16.88
+1588,2025-12-09,South,In store,Returning,Trail Backpack,Outdoor,1,89.00,0.2,71.20
+1589,2025-01-21,East,In store,Returning,Trail Backpack,Outdoor,5,89.00,0,445.00
+1590,2025-10-24,East,In store,Returning,Portable Charger,Electronics,2,34.99,0,69.98
+1591,2025-09-22,North,In store,New,Insulated Bottle,Outdoor,1,24.50,0.2,19.60
+1592,2025-09-07,North,Online,Returning,Smart Watch,Electronics,3,199.00,0.1,537.30
+1593,2025-02-09,North,Online,New,Wireless Earbuds,Electronics,2,79.00,0,158.00
+1594,2025-12-05,East,In store,Returning,Insulated Bottle,Outdoor,1,24.50,0.1,22.05
+1595,2025-04-18,South,Online,New,Resistance Bands,Fitness,2,18.75,0,37.50
+1596,2025-03-10,East,Online,New,Camping Lantern,Outdoor,2,39.99,0,79.98
+1597,2025-09-22,East,Online,Returning,Camping Lantern,Outdoor,5,39.99,0,199.95
+1598,2025-02-13,South,In store,New,Portable Charger,Electronics,1,34.99,0,34.99
+1599,2025-11-04,West,In store,New,Yoga Mat,Fitness,1,29.00,0,29.00
+1600,2025-08-21,South,Online,New,Smart Watch,Electronics,2,199.00,0,398.00

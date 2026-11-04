@@ -1,0 +1,92 @@
+[
+  {
+    "id": "q01",
+    "difficulty": "easy",
+    "question": "How many orders are there in total?",
+    "sql": "SELECT COUNT(*) FROM data"
+  },
+  {
+    "id": "q02",
+    "difficulty": "easy",
+    "question": "What is the total revenue?",
+    "sql": "SELECT ROUND(SUM(revenue), 2) FROM data"
+  },
+  {
+    "id": "q03",
+    "difficulty": "easy",
+    "question": "How many different products are sold?",
+    "sql": "SELECT COUNT(DISTINCT product) FROM data"
+  },
+  {
+    "id": "q04",
+    "difficulty": "easy",
+    "question": "What is the total revenue for each region?",
+    "sql": "SELECT region, ROUND(SUM(revenue), 2) FROM data GROUP BY region"
+  },
+  {
+    "id": "q05",
+    "difficulty": "easy",
+    "question": "How many units of Yoga Mat were sold?",
+    "sql": "SELECT SUM(units) FROM data WHERE product = 'Yoga Mat'"
+  },
+  {
+    "id": "q06",
+    "difficulty": "medium",
+    "question": "Which product brought in the most revenue?",
+    "sql": "SELECT product FROM data GROUP BY product ORDER BY SUM(revenue) DESC LIMIT 1"
+  },
+  {
+    "id": "q07",
+    "difficulty": "medium",
+    "question": "What is the average order revenue for online orders versus in store orders?",
+    "sql": "SELECT channel, ROUND(AVG(revenue), 2) FROM data GROUP BY channel"
+  },
+  {
+    "id": "q08",
+    "difficulty": "medium",
+    "question": "List the top 3 products by number of units sold.",
+    "sql": "SELECT product FROM data GROUP BY product ORDER BY SUM(units) DESC LIMIT 3"
+  },
+  {
+    "id": "q09",
+    "difficulty": "medium",
+    "question": "How many orders had a discount?",
+    "sql": "SELECT COUNT(*) FROM data WHERE discount > 0"
+  },
+  {
+    "id": "q10",
+    "difficulty": "medium",
+    "question": "What was the total revenue in March 2025?",
+    "sql": "SELECT ROUND(SUM(revenue), 2) FROM data WHERE strftime('%Y-%m', order_date) = '2025-03'"
+  },
+  {
+    "id": "q11",
+    "difficulty": "hard",
+    "question": "Which month had the highest total revenue? Give the month as YYYY-MM.",
+    "sql": "SELECT strftime('%Y-%m', order_date) FROM data GROUP BY 1 ORDER BY SUM(revenue) DESC LIMIT 1"
+  },
+  {
+    "id": "q12",
+    "difficulty": "hard",
+    "question": "What percentage of orders came from returning customers?",
+    "sql": "SELECT ROUND(100.0 * SUM(customer_type = 'Returning') / COUNT(*), 2) FROM data"
+  },
+  {
+    "id": "q13",
+    "difficulty": "hard",
+    "question": "What is the best selling product by revenue in each category?",
+    "sql": "SELECT category, product FROM (SELECT category, product, SUM(revenue) AS r, ROW_NUMBER() OVER (PARTITION BY category ORDER BY SUM(revenue) DESC) AS rn FROM data GROUP BY category, product) WHERE rn = 1"
+  },
+  {
+    "id": "q14",
+    "difficulty": "hard",
+    "question": "Which region had the highest average number of units per order among new customers?",
+    "sql": "SELECT region FROM data WHERE customer_type = 'New' GROUP BY region ORDER BY AVG(units) DESC LIMIT 1"
+  },
+  {
+    "id": "q15",
+    "difficulty": "hard",
+    "question": "How much revenue was lost to discounts in total? Revenue before discount is units times unit price.",
+    "sql": "SELECT ROUND(SUM(units * unit_price) - SUM(revenue), 2) FROM data"
+  }
+]

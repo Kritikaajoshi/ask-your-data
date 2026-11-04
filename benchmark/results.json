@@ -1,0 +1,184 @@
+{
+  "summary": {
+    "model": "gemini-3.6-flash",
+    "questions": 15,
+    "scored": 15,
+    "api_errors": 0,
+    "correct": 15,
+    "accuracy_percent": 100.0,
+    "by_difficulty": {
+      "easy": "5/5",
+      "medium": "5/5",
+      "hard": "5/5"
+    },
+    "self_corrected": 0,
+    "median_seconds": 4.01
+  },
+  "results": [
+    {
+      "id": "q01",
+      "difficulty": "easy",
+      "question": "How many orders are there in total?",
+      "status": "ok",
+      "sql": "SELECT COUNT(\"order_id\") AS \"total_orders\" FROM \"data\"",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 3.5
+    },
+    {
+      "id": "q02",
+      "difficulty": "easy",
+      "question": "What is the total revenue?",
+      "status": "ok",
+      "sql": "SELECT ROUND(SUM(\"revenue\"), 2) AS \"total_revenue\" FROM \"data\";",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 2.64
+    },
+    {
+      "id": "q03",
+      "difficulty": "easy",
+      "question": "How many different products are sold?",
+      "status": "ok",
+      "sql": "SELECT COUNT(DISTINCT \"product\") AS \"distinct_products\" FROM \"data\";",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 2.32
+    },
+    {
+      "id": "q04",
+      "difficulty": "easy",
+      "question": "What is the total revenue for each region?",
+      "status": "ok",
+      "sql": "SELECT \"region\", ROUND(SUM(\"revenue\"), 2) AS \"total_revenue\"\nFROM \"data\"\nGROUP BY \"region\"",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 4.65
+    },
+    {
+      "id": "q05",
+      "difficulty": "easy",
+      "question": "How many units of Yoga Mat were sold?",
+      "status": "ok",
+      "sql": "SELECT SUM(\"units\") AS \"total_units\" FROM \"data\" WHERE \"product\" = 'Yoga Mat';",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 3.7
+    },
+    {
+      "id": "q06",
+      "difficulty": "medium",
+      "question": "Which product brought in the most revenue?",
+      "status": "ok",
+      "sql": "SELECT \"product\", SUM(\"revenue\") AS \"total_revenue\"\nFROM \"data\"\nGROUP BY \"product\"\nORDER BY \"total_revenue\" DESC\nLIMIT 1;",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 2.2
+    },
+    {
+      "id": "q07",
+      "difficulty": "medium",
+      "question": "What is the average order revenue for online orders versus in store orders?",
+      "status": "ok",
+      "sql": "SELECT \"channel\", ROUND(AVG(\"revenue\"), 2) AS \"avg_revenue\"\nFROM \"data\"\nGROUP BY \"channel\"",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 4.61
+    },
+    {
+      "id": "q08",
+      "difficulty": "medium",
+      "question": "List the top 3 products by number of units sold.",
+      "status": "ok",
+      "sql": "SELECT \"product\", SUM(\"units\") AS \"total_units\"\nFROM \"data\"\nGROUP BY \"product\"\nORDER BY \"total_units\" DESC\nLIMIT 3;",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 2.62
+    },
+    {
+      "id": "q09",
+      "difficulty": "medium",
+      "question": "How many orders had a discount?",
+      "status": "ok",
+      "sql": "SELECT COUNT(\"order_id\") AS \"discounted_orders\" FROM \"data\" WHERE \"discount\" > 0;",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 4.01
+    },
+    {
+      "id": "q10",
+      "difficulty": "medium",
+      "question": "What was the total revenue in March 2025?",
+      "status": "ok",
+      "sql": "SELECT ROUND(SUM(\"revenue\"), 2) AS \"total_revenue\"\nFROM \"data\"\nWHERE strftime('%Y-%m', \"order_date\") = '2025-03'",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 5.1
+    },
+    {
+      "id": "q11",
+      "difficulty": "hard",
+      "question": "Which month had the highest total revenue? Give the month as YYYY-MM.",
+      "status": "ok",
+      "sql": "SELECT strftime('%Y-%m', \"order_date\") AS \"month\", ROUND(SUM(\"revenue\"), 2) AS \"total_revenue\"\nFROM \"data\"\nGROUP BY \"month\"\nORDER BY \"total_revenue\" DESC\nLIMIT 1;",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 5.06
+    },
+    {
+      "id": "q12",
+      "difficulty": "hard",
+      "question": "What percentage of orders came from returning customers?",
+      "status": "ok",
+      "sql": "SELECT ROUND(COUNT(CASE WHEN \"customer_type\" = 'Returning' THEN 1 END) * 100.0 / COUNT(*), 2) AS \"returning_customer_percentage\"\nFROM \"data\";",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 3.81
+    },
+    {
+      "id": "q13",
+      "difficulty": "hard",
+      "question": "What is the best selling product by revenue in each category?",
+      "status": "ok",
+      "sql": "WITH \"ranked_products\" AS (\n    SELECT\n        \"category\",\n        \"product\",\n        SUM(\"revenue\") AS \"total_revenue\",\n        ROW_NUMBER() OVER (PARTITION BY \"category\" ORDER BY SUM(\"revenue\") DESC) AS \"rank\"\n    FROM \"data\"\n    GROUP BY \"category\", \"product\"\n)\nSELECT\n    \"category\",\n    \"product\",\n    ROUND(\"total_revenue\", 2) AS \"total_revenue\"\nFROM \"ranked_products\"\nWHERE \"rank\" = 1",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 7.46
+    },
+    {
+      "id": "q14",
+      "difficulty": "hard",
+      "question": "Which region had the highest average number of units per order among new customers?",
+      "status": "ok",
+      "sql": "SELECT \"region\", ROUND(AVG(\"units\"), 2) AS \"avg_units\"\nFROM \"data\"\nWHERE \"customer_type\" = 'New'\nGROUP BY \"region\"\nORDER BY \"avg_units\" DESC\nLIMIT 1",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 4.16
+    },
+    {
+      "id": "q15",
+      "difficulty": "hard",
+      "question": "How much revenue was lost to discounts in total? Revenue before discount is units times unit price.",
+      "status": "ok",
+      "sql": "SELECT ROUND(SUM(\"units\" * \"unit_price\" - \"revenue\"), 2) AS \"total_lost_revenue\"\nFROM \"data\"",
+      "correct": true,
+      "attempts": 1,
+      "self_corrected": false,
+      "seconds": 6.54
+    }
+  ]
+}
