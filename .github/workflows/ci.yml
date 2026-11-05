@@ -1,10 +1,15 @@
-name: CI
+name: CI/CD
 
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
+
+env:
+  AWS_REGION: us-east-2
+  SERVICE_NAME: ask-your-data
+  GEMINI_MODEL: gemini-3.6-flash
 
 jobs:
   tests:
@@ -34,3 +39,85 @@ jobs:
           done
           docker logs app
           exit 1
+
+  deploy:
+    # Only deploy real pushes to main, and only after tests and the Docker check pass.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: [tests, docker-build]
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Log in to AWS
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Install the Lightsail plugin
+        run: |
+          sudo curl -fsSL "https://s3.us-west-2.amazonaws.com/lightsailctl/latest/linux-amd64/lightsailctl" -o /usr/local/bin/lightsailctl
+          sudo chmod +x /usr/local/bin/lightsailctl
+
+      - name: Build the image
+        run: docker build -t ask-your-data:${{ github.sha }} .
+
+      - name: Upload the image to Lightsail
+        id: push
+        run: |
+          aws lightsail push-container-image \
+            --service-name "$SERVICE_NAME" \
+            --label app \
+            --image "ask-your-data:${{ github.sha }}"
+          IMAGE=$(aws lightsail get-container-images \
+            --service-name "$SERVICE_NAME" \
+            --query 'containerImages[0].image' --output text)
+          echo "Uploaded image: $IMAGE"
+          echo "image=$IMAGE" >> "$GITHUB_OUTPUT"
+
+      - name: Start the new deployment
+        id: deploy
+        env:
+          IMAGE: ${{ steps.push.outputs.image }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          jq -n --arg image "$IMAGE" --arg key "$GEMINI_API_KEY" --arg model "$GEMINI_MODEL" '{
+            app: {
+              image: $image,
+              ports: {"8000": "HTTP"},
+              environment: {GEMINI_API_KEY: $key, GEMINI_MODEL: $model}
+            }
+          }' > containers.json
+          jq -n '{
+            containerName: "app",
+            containerPort: 8000,
+            healthCheck: {path: "/api/health", successCodes: "200"}
+          }' > endpoint.json
+          VERSION=$(aws lightsail create-container-service-deployment \
+            --service-name "$SERVICE_NAME" \
+            --containers file://containers.json \
+            --public-endpoint file://endpoint.json \
+            --query 'containerService.nextDeployment.version' --output text)
+          rm containers.json
+          echo "Started deployment version $VERSION"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Wait until the new version is live
+        env:
+          VERSION: ${{ steps.deploy.outputs.version }}
+        run: |
+          for i in $(seq 1 60); do
+            STATE=$(aws lightsail get-container-service-deployments \
+              --service-name "$SERVICE_NAME" \
+              --query "deployments[?version==\`$VERSION\`].state | [0]" --output text)
+            echo "Deployment $VERSION state: $STATE"
+            if [ "$STATE" = "ACTIVE" ]; then break; fi
+            if [ "$STATE" = "FAILED" ]; then echo "Deployment failed. Check the Lightsail logs."; exit 1; fi
+            sleep 15
+          done
+          if [ "$STATE" != "ACTIVE" ]; then echo "Timed out waiting for the deployment."; exit 1; fi
+          URL=$(aws lightsail get-container-services --service-name "$SERVICE_NAME" \
+            --query 'containerServices[0].url' --output text)
+          echo "Live at $URL"
+          curl -fsS "${URL%/}/api/health"
