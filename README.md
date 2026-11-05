@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/Kritikaajoshi/ask-your-data/actions/workflows/ci.yml/badge.svg)](https://github.com/Kritikaajoshi/ask-your-data/actions/workflows/ci.yml)
 
+**Live demo:** https://ask-your-data.cqbn7sc7rad8w.us-east-2.cs.amazonlightsail.com/
+
 Ask questions about any CSV file in plain English. An LLM agent writes a SQL query, runs it safely
 against your data, and explains the result. Every answer shows the exact SQL that produced it, so
 you can check the work.
@@ -49,7 +51,7 @@ SQL written by an LLM is treated as untrusted input. There are several independe
 - **AI:** Google Gemini through the `google-genai` SDK
 - **Frontend:** plain HTML, CSS, and JavaScript served by FastAPI (no build step)
 - **Testing:** pytest with a fake LLM, so tests run without an API key
-- **CI/CD:** GitHub Actions, Docker
+- **CI/CD:** GitHub Actions runs tests and a Docker check on every push, then deploys to AWS Lightsail only if everything passes
 
 ## Run it locally
 
