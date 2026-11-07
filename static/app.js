@@ -24,25 +24,25 @@ const state = {
 
 const $ = (id) => document.getElementById(id);
 
-const elements = {
+const el = {
   notice: $("notice"),
-  noDataset: $("no-dataset"),
-  datasetInfo: $("dataset-info"),
-  datasetName: $("dataset-name"),
-  datasetMeta: $("dataset-meta"),
-  columnList: $("column-list"),
+  start: $("start"),
+  workspace: $("workspace"),
+  chip: $("dataset-chip"),
+  chipName: $("chip-name"),
   changeButton: $("change-button"),
   dropzone: $("dropzone"),
   fileInput: $("file-input"),
   sampleButton: $("sample-button"),
-  emptyState: $("empty-state"),
-  askArea: $("ask-area"),
+  datasetName: $("dataset-name"),
+  datasetMeta: $("dataset-meta"),
+  columnList: $("column-list"),
+  previewTable: $("preview-table"),
+  thread: $("thread"),
+  suggestions: $("suggestions"),
   askForm: $("ask-form"),
   question: $("question"),
   askButton: $("ask-button"),
-  suggestions: $("suggestions"),
-  previewTable: $("preview-table"),
-  results: $("results"),
   template: $("result-template"),
 };
 
@@ -74,13 +74,13 @@ async function api(path, options = {}) {
 }
 
 function showNotice(message, kind = "error") {
-  elements.notice.textContent = message;
-  elements.notice.className = kind === "info" ? "notice notice-info" : "notice";
-  elements.notice.hidden = false;
+  el.notice.textContent = message;
+  el.notice.className = kind === "info" ? "notice notice-info" : "notice";
+  el.notice.hidden = false;
 }
 
 function hideNotice() {
-  elements.notice.hidden = true;
+  el.notice.hidden = true;
 }
 
 function escapeHtml(text) {
@@ -90,6 +90,10 @@ function escapeHtml(text) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+function plural(count, word) {
+  return `${count.toLocaleString()} ${word}${count === 1 ? "" : "s"}`;
 }
 
 function formatCell(value) {
@@ -117,20 +121,19 @@ function renderTable(container, columns, rows, note) {
   container.hidden = false;
 
   const table = document.createElement("table");
-  const thead = table.createTHead();
-  const headRow = thead.insertRow();
+  const headRow = table.createTHead().insertRow();
   columns.forEach((name, index) => {
     const th = document.createElement("th");
     th.scope = "col";
     th.textContent = name;
-    const firstValue = rows.map((row) => row[index]).find((v) => v !== null && v !== undefined);
-    if (typeof firstValue === "number") th.className = "num";
+    const first = rows.map((row) => row[index]).find((v) => v !== null && v !== undefined);
+    if (typeof first === "number") th.className = "num";
     headRow.appendChild(th);
   });
 
-  const tbody = table.createTBody();
+  const body = table.createTBody();
   for (const row of rows) {
-    const tr = tbody.insertRow();
+    const tr = body.insertRow();
     for (const value of row) {
       const td = tr.insertCell();
       const cell = formatCell(value);
@@ -169,10 +172,6 @@ function highlightSql(sql) {
   return html;
 }
 
-function plural(count, word) {
-  return `${count.toLocaleString()} ${word}${count === 1 ? "" : "s"}`;
-}
-
 function rememberDataset() {
   try {
     if (state.dataset) {
@@ -186,6 +185,11 @@ function rememberDataset() {
   } catch (error) {
     // Storage can be blocked by the browser. The app works without it.
   }
+}
+
+function autoResize() {
+  el.question.style.height = "auto";
+  el.question.style.height = `${Math.min(el.question.scrollHeight, 180)}px`;
 }
 
 /* Dataset */
@@ -204,17 +208,19 @@ function suggestionsFor(dataset, isSample) {
 }
 
 function renderSuggestions(list) {
-  elements.suggestions.textContent = "";
+  el.suggestions.textContent = "";
   for (const text of list) {
+    const li = document.createElement("li");
     const button = document.createElement("button");
     button.type = "button";
     button.className = "suggestion";
     button.textContent = text;
     button.addEventListener("click", () => {
-      elements.question.value = text;
+      el.question.value = text;
       askQuestion();
     });
-    elements.suggestions.appendChild(button);
+    li.appendChild(button);
+    el.suggestions.appendChild(li);
   }
 }
 
@@ -224,15 +230,20 @@ function typeLabel(type) {
   return "text";
 }
 
+function clearResults() {
+  el.thread.querySelectorAll(".result").forEach((node) => node.remove());
+}
+
 function showDataset(dataset, isSample) {
   state.dataset = dataset;
   state.isSample = isSample;
   rememberDataset();
 
-  elements.datasetName.textContent = dataset.filename;
-  elements.datasetMeta.textContent = `${plural(dataset.row_count, "row")}, ${plural(dataset.columns.length, "column")}`;
+  el.chipName.textContent = dataset.filename;
+  el.datasetName.textContent = dataset.filename;
+  el.datasetMeta.textContent = `${plural(dataset.row_count, "row")}, ${plural(dataset.columns.length, "column")}`;
 
-  elements.columnList.textContent = "";
+  el.columnList.textContent = "";
   for (const column of dataset.columns) {
     const li = document.createElement("li");
     const name = document.createElement("span");
@@ -245,43 +256,41 @@ function showDataset(dataset, isSample) {
     type.className = "column-type";
     type.textContent = typeLabel(column.type);
     li.append(name, type);
-    elements.columnList.appendChild(li);
+    el.columnList.appendChild(li);
   }
 
-  renderTable(elements.previewTable, dataset.preview.columns, dataset.preview.rows);
+  renderTable(el.previewTable, dataset.preview.columns, dataset.preview.rows);
   renderSuggestions(suggestionsFor(dataset, isSample));
+  clearResults();
 
-  elements.noDataset.hidden = true;
-  elements.datasetInfo.hidden = false;
-  elements.emptyState.hidden = true;
-  elements.askArea.hidden = false;
-  elements.results.textContent = "";
-  elements.question.focus();
+  el.start.hidden = true;
+  el.workspace.hidden = false;
+  el.chip.hidden = false;
+  el.question.focus();
 }
 
 function resetDataset() {
   state.dataset = null;
   state.isSample = false;
   rememberDataset();
-  elements.noDataset.hidden = false;
-  elements.datasetInfo.hidden = true;
-  elements.emptyState.hidden = false;
-  elements.askArea.hidden = true;
-  elements.results.textContent = "";
-  elements.fileInput.value = "";
+  clearResults();
+  el.workspace.hidden = true;
+  el.chip.hidden = true;
+  el.start.hidden = false;
+  el.fileInput.value = "";
 }
 
 function setLoadingDataset(isLoading) {
-  elements.sampleButton.disabled = isLoading;
-  elements.sampleButton.textContent = isLoading ? "Loading..." : "Use sample sales data";
-  elements.dropzone.setAttribute("aria-busy", String(isLoading));
+  el.sampleButton.disabled = isLoading;
+  el.sampleButton.textContent = isLoading ? "Loading sample data..." : "Try it with sample sales data";
+  el.dropzone.setAttribute("aria-busy", String(isLoading));
 }
 
 async function uploadFile(file) {
   if (!file) return;
   hideNotice();
   if (!/\.(csv|tsv|txt)$/i.test(file.name)) {
-    showNotice("Please choose a .csv file.");
+    showNotice("Choose a .csv file. Excel files can be saved as CSV with File, then Save As.");
     return;
   }
   setLoadingDataset(true);
@@ -313,14 +322,14 @@ async function loadSample() {
 /* Asking */
 
 function createResultCard(question) {
-  const card = elements.template.content.firstElementChild.cloneNode(true);
+  const card = el.template.content.firstElementChild.cloneNode(true);
   card.querySelector(".result-question").textContent = question;
-  const answer = card.querySelector(".result-answer");
-  answer.innerHTML = '<span class="loading-dots">Writing a query</span>';
-  card.classList.add("is-loading", "is-new");
-  card.querySelector(".sql-block").hidden = true;
+  card.querySelector(".result-answer").textContent = "Writing a query...";
+  card.classList.add("is-loading");
   card.querySelector(".result-table").hidden = true;
-  elements.results.prepend(card);
+  card.querySelector(".sql").hidden = true;
+  el.thread.appendChild(card);
+  card.scrollIntoView({ behavior: "smooth", block: "start" });
   return card;
 }
 
@@ -328,26 +337,7 @@ function fillResultCard(card, result) {
   card.classList.remove("is-loading");
   card.querySelector(".result-answer").textContent = result.answer;
 
-  const sqlBlock = card.querySelector(".sql-block");
-  if (result.sql) {
-    sqlBlock.hidden = false;
-    card.querySelector(".sql-code").innerHTML = highlightSql(result.sql);
-    const copy = card.querySelector(".copy-button");
-    copy.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(result.sql);
-        copy.textContent = "Copied";
-      } catch (error) {
-        copy.textContent = "Copy failed";
-      }
-      setTimeout(() => (copy.textContent = "Copy"), 1600);
-    });
-  }
-
-  if (result.status === "failed") {
-    card.classList.add("is-error");
-    card.querySelector(".sql-label").textContent = "Last query tried";
-  }
+  if (result.status === "failed") card.classList.add("is-error");
 
   if (result.status === "ok") {
     const note = result.truncated ? `Showing the first ${result.row_count} rows.` : "";
@@ -356,26 +346,52 @@ function fillResultCard(card, result) {
 
   const meta = [];
   if (result.status === "ok") meta.push(plural(result.row_count, "row"));
-  meta.push(`${(result.elapsed_ms / 1000).toFixed(1)} s`);
+  meta.push(`answered in ${(result.elapsed_ms / 1000).toFixed(1)} s`);
   if (result.status === "ok" && result.failed_attempts.length) {
-    meta.push(`fixed itself after ${plural(result.failed_attempts.length, "failed attempt")}`);
+    meta.push(`fixed its own query after ${plural(result.failed_attempts.length, "failed attempt")}`);
   }
   card.querySelector(".result-meta").textContent = meta.join(", ");
 
-  if (result.failed_attempts.length) {
-    const details = card.querySelector(".attempts");
-    details.hidden = false;
-    details.querySelector("summary").textContent = "Show failed attempts";
-    const list = details.querySelector(".attempt-list");
-    for (const attempt of result.failed_attempts) {
-      const li = document.createElement("li");
-      const code = document.createElement("code");
-      code.textContent = attempt.sql || "(no query)";
-      const error = document.createElement("span");
-      error.className = "attempt-error";
-      error.textContent = attempt.error;
-      li.append(code, error);
-      list.appendChild(li);
+  if (result.sql || result.failed_attempts.length) {
+    const sql = card.querySelector(".sql");
+    sql.hidden = false;
+    if (result.status === "failed") {
+      sql.querySelector("summary").textContent = "Show the queries that were tried";
+    }
+    const code = card.querySelector(".sql-code");
+    const copy = card.querySelector(".copy-button");
+    if (result.sql) {
+      code.innerHTML = highlightSql(result.sql);
+      copy.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(result.sql);
+          copy.textContent = "Copied";
+        } catch (error) {
+          copy.textContent = "Copy failed";
+        }
+        setTimeout(() => (copy.textContent = "Copy SQL"), 1600);
+      });
+    } else {
+      copy.hidden = true;
+      code.parentElement.hidden = true;
+    }
+
+    if (result.failed_attempts.length) {
+      const attempts = card.querySelector(".attempts");
+      attempts.hidden = false;
+      attempts.querySelector(".attempts-title").textContent =
+        result.status === "ok" ? "Earlier attempts that failed:" : "Attempts:";
+      const list = attempts.querySelector(".attempt-list");
+      for (const attempt of result.failed_attempts) {
+        const li = document.createElement("li");
+        const attemptCode = document.createElement("code");
+        attemptCode.textContent = attempt.sql || "(no query)";
+        const error = document.createElement("span");
+        error.className = "attempt-error";
+        error.textContent = attempt.error;
+        li.append(attemptCode, error);
+        list.appendChild(li);
+      }
     }
   }
 }
@@ -387,13 +403,15 @@ function failResultCard(card, message) {
 }
 
 async function askQuestion() {
-  const question = elements.question.value.trim();
+  const question = el.question.value.trim();
   if (!question || state.busy || !state.dataset) return;
 
   hideNotice();
   state.busy = true;
-  elements.askButton.disabled = true;
-  elements.askButton.textContent = "Asking...";
+  el.askButton.disabled = true;
+  el.askButton.textContent = "Asking...";
+  el.question.value = "";
+  autoResize();
   const card = createResultCard(question);
 
   try {
@@ -403,7 +421,6 @@ async function askQuestion() {
       body: JSON.stringify({ dataset_id: state.dataset.id, question }),
     });
     fillResultCard(card, result);
-    elements.question.value = "";
   } catch (error) {
     failResultCard(card, error.message);
     if (/not found/i.test(error.message)) {
@@ -412,40 +429,41 @@ async function askQuestion() {
     }
   } finally {
     state.busy = false;
-    elements.askButton.disabled = false;
-    elements.askButton.textContent = "Ask";
+    el.askButton.disabled = false;
+    el.askButton.textContent = "Ask";
+    el.question.focus();
   }
 }
 
 /* Events */
 
-elements.fileInput.addEventListener("change", () => uploadFile(elements.fileInput.files[0]));
-elements.sampleButton.addEventListener("click", loadSample);
-elements.changeButton.addEventListener("click", resetDataset);
+el.fileInput.addEventListener("change", () => uploadFile(el.fileInput.files[0]));
+el.sampleButton.addEventListener("click", loadSample);
+el.changeButton.addEventListener("click", resetDataset);
 
 for (const eventName of ["dragenter", "dragover"]) {
-  elements.dropzone.addEventListener(eventName, (event) => {
+  el.dropzone.addEventListener(eventName, (event) => {
     event.preventDefault();
-    elements.dropzone.classList.add("is-dragging");
+    el.dropzone.classList.add("is-dragging");
   });
 }
 for (const eventName of ["dragleave", "drop"]) {
-  elements.dropzone.addEventListener(eventName, (event) => {
+  el.dropzone.addEventListener(eventName, (event) => {
     event.preventDefault();
-    elements.dropzone.classList.remove("is-dragging");
+    el.dropzone.classList.remove("is-dragging");
   });
 }
-elements.dropzone.addEventListener("drop", (event) => {
-  const file = event.dataTransfer && event.dataTransfer.files[0];
-  uploadFile(file);
+el.dropzone.addEventListener("drop", (event) => {
+  uploadFile(event.dataTransfer && event.dataTransfer.files[0]);
 });
 
-elements.askForm.addEventListener("submit", (event) => {
+el.askForm.addEventListener("submit", (event) => {
   event.preventDefault();
   askQuestion();
 });
 
-elements.question.addEventListener("keydown", (event) => {
+el.question.addEventListener("input", autoResize);
+el.question.addEventListener("keydown", (event) => {
   if (event.key === "Enter" && !event.shiftKey) {
     event.preventDefault();
     askQuestion();

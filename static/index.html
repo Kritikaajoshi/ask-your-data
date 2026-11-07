@@ -5,91 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Ask Your Data</title>
   <meta name="description" content="Ask questions about a CSV file in plain English and see the SQL behind every answer.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232E44C7'/%3E%3Crect x='7' y='9' width='18' height='3' rx='1.5' fill='%23FFE27A'/%3E%3Crect x='7' y='15' width='12' height='3' rx='1.5' fill='white'/%3E%3Crect x='7' y='21' width='15' height='3' rx='1.5' fill='white'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231B5E7A'/%3E%3Cpath d='M8 10h16M8 16h16M8 22h10' stroke='white' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand">
+  <header class="topbar">
+    <a class="brand" href="/">
       <span class="brand-mark" aria-hidden="true"></span>
-      <h1>Ask Your Data</h1>
+      <span class="brand-name">Ask Your Data</span>
+    </a>
+    <div id="dataset-chip" class="dataset-chip" hidden>
+      <span id="chip-name" class="chip-name"></span>
+      <button id="change-button" class="text-button" type="button">Change file</button>
     </div>
-    <p class="tagline">Ask a question about a CSV in plain English. Get the answer and the SQL that produced it.</p>
   </header>
 
   <div id="notice" class="notice" role="status" hidden></div>
 
-  <div class="layout">
-    <aside class="panel dataset-panel" aria-label="Dataset">
-      <section id="no-dataset">
-        <h2 class="panel-title">Choose a CSV</h2>
-        <label id="dropzone" class="dropzone" for="file-input">
-          <input id="file-input" type="file" accept=".csv,.tsv,.txt,text/csv" class="visually-hidden">
-          <span class="dropzone-main">Drop a CSV here or click to browse</span>
-          <span class="dropzone-hint">Up to 10 MB. The first row should hold column names.</span>
-        </label>
-        <div class="or-line"><span>or</span></div>
-        <button id="sample-button" class="button button-secondary" type="button">Use sample sales data</button>
-      </section>
+  <main id="start" class="start">
+    <div class="start-inner">
+      <h1 class="start-title">Ask your spreadsheet a question.</h1>
+      <p class="start-lede">Upload a CSV and ask in plain English. You get the answer, the result table, and the exact SQL that produced it, so you can check the work.</p>
 
-      <section id="dataset-info" hidden>
-        <div class="dataset-head">
-          <div>
-            <h2 id="dataset-name" class="dataset-name"></h2>
-            <p id="dataset-meta" class="dataset-meta"></p>
-          </div>
-          <button id="change-button" class="link-button" type="button">Change file</button>
-        </div>
-        <h3 class="columns-title">Columns</h3>
-        <ul id="column-list" class="column-list"></ul>
-      </section>
+      <label id="dropzone" class="dropzone" for="file-input">
+        <input id="file-input" type="file" accept=".csv,.tsv,.txt,text/csv" class="visually-hidden">
+        <span class="dropzone-title">Drop a CSV file here, or click to choose one</span>
+        <span class="dropzone-hint">Up to 10 MB, with column names in the first row</span>
+      </label>
+
+      <p class="start-alt">
+        No file handy?
+        <button id="sample-button" class="text-button strong" type="button">Try it with sample sales data</button>
+      </p>
+    </div>
+  </main>
+
+  <div id="workspace" class="workspace" hidden>
+    <aside class="schema" aria-label="Columns in this file">
+      <h2 id="dataset-name" class="schema-title"></h2>
+      <p id="dataset-meta" class="schema-meta"></p>
+      <ul id="column-list" class="column-list"></ul>
+      <details class="preview">
+        <summary>Preview the first rows</summary>
+        <div class="table-wrap" id="preview-table"></div>
+      </details>
     </aside>
 
-    <main class="main">
-      <section id="empty-state" class="empty-state">
-        <h2>Start with a dataset</h2>
-        <p>Upload your own CSV or try the sample: 600 orders from an outdoor and fitness store, with regions, products, dates, and revenue.</p>
-        <p class="empty-note">Every answer shows the exact SQL query that was run, so you can check the work.</p>
-      </section>
+    <section class="thread-area">
+      <div id="thread" class="thread" aria-live="polite">
+        <div id="suggestions-block" class="suggestions-block">
+          <h2 class="suggestions-title">Questions to try</h2>
+          <ul id="suggestions" class="suggestions"></ul>
+        </div>
+      </div>
 
-      <section id="ask-area" hidden>
-        <form id="ask-form" class="ask-form">
-          <label for="question" class="visually-hidden">Your question</label>
-          <textarea id="question" rows="2" maxlength="500" placeholder="For example: Which region had the highest revenue?" required></textarea>
-          <button id="ask-button" class="button button-primary" type="submit">Ask</button>
-        </form>
-        <div id="suggestions" class="suggestions" aria-label="Example questions"></div>
-
-        <details class="preview">
-          <summary>Preview the first rows</summary>
-          <div class="table-wrap" id="preview-table"></div>
-        </details>
-      </section>
-
-      <section id="results" class="results" aria-live="polite"></section>
-    </main>
+      <form id="ask-form" class="ask-bar">
+        <label for="question" class="visually-hidden">Your question</label>
+        <textarea id="question" rows="1" maxlength="500" placeholder="Ask a question about this file" required></textarea>
+        <button id="ask-button" class="ask-button" type="submit">Ask</button>
+      </form>
+      <p class="ask-hint">Press Enter to ask, Shift + Enter for a new line. Queries are read-only, and files are deleted after 24 hours.</p>
+    </section>
   </div>
-
-  <footer class="site-footer">
-    <p>Queries run in read-only mode. Uploaded files are deleted after 24 hours.</p>
-  </footer>
 
   <template id="result-template">
     <article class="result">
-      <h2 class="result-question"></h2>
+      <p class="result-question"></p>
       <p class="result-answer"></p>
-      <div class="sql-block">
-        <div class="sql-bar">
-          <span class="sql-label">SQL query</span>
-          <button class="copy-button" type="button">Copy</button>
-        </div>
-        <pre><code class="sql-code"></code></pre>
-      </div>
       <div class="table-wrap result-table"></div>
       <p class="result-meta"></p>
-      <details class="attempts" hidden>
-        <summary></summary>
-        <ol class="attempt-list"></ol>
+      <details class="sql">
+        <summary>How this was calculated</summary>
+        <div class="sql-body">
+          <button class="copy-button" type="button">Copy SQL</button>
+          <pre><code class="sql-code"></code></pre>
+          <div class="attempts" hidden>
+            <p class="attempts-title"></p>
+            <ol class="attempt-list"></ol>
+          </div>
+        </div>
       </details>
     </article>
   </template>
